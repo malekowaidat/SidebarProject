@@ -1,0 +1,59 @@
+.sidebar {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: black;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+    z-index: 2;
+    color: white;
+}
+
+.sidebar a {
+    /* padding: 8px 8px 8px 32px; */
+    text-decoration: none;
+    font-size: 25px;
+    color: white;
+    display: block;
+}
+
+.sidebar a:hover {
+    color: salmon;
+}
+
+.close_button {
+    position: absolute;
+    top: 10px;
+    right: 25px;
+    margin-left: 50px;
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0s, opacity 0.5s;
+    backdrop-filter: blur(5px);
+}
+
+.sidebar_open .sidebar {
+    width: 300px;
+}
+
+.sidebar_open .overlay {
+    visibility: visible;
+    opacity: 1;
+}
+
+.hamburger {
+    cursor: pointer;
+    padding: 20px;
+}
